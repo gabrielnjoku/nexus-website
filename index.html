@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus — Build Your Digital Future</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./dist/output.css" />
+  
+</head>
+
+<body class="bg-navy text-slate-200 font-sans overflow-x-hidden bg-grid-pattern">
+
+  <!-- NAVIGATION -->
+  <input type="checkbox" id="nav-toggle" class="hidden" />
+
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <nav class="bg-navy/80 border-b border-white/[0.06] backdrop-blur-md">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="flex items-center justify-between h-16">
+
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-2.5 group">
+            <div class="w-8 h-8 rounded-lg bg-sky-brand flex items-center justify-center shadow-lg shadow-sky-brand/40 group-hover:shadow-sky-brand/60 transition-shadow">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-white" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <span class="font-display font-bold text-white text-lg tracking-tight">Nexus</span>
+          </a>
+
+          <!-- Desktop nav links -->
+          <ul class="hidden md:flex items-center gap-8">
+            <li><a href="#home"     class="text-slate-300 hover:text-white text-sm font-medium transition-colors duration-200">Home</a></li>
+            <li><a href="#services" class="text-slate-300 hover:text-white text-sm font-medium transition-colors duration-200">Services</a></li>
+            <li><a href="#about"    class="text-slate-300 hover:text-white text-sm font-medium transition-colors duration-200">About</a></li>
+            <li><a href="#contact"  class="text-slate-300 hover:text-white text-sm font-medium transition-colors duration-200">Contact</a></li>
+          </ul>
+
+          <!-- CTA + hamburger label -->
+          <div class="flex items-center gap-3">
+            <a href="#contact" class="hidden md:inline-flex items-center gap-1.5 bg-sky-brand hover:bg-blue-400 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors duration-200 shadow-md shadow-sky-brand/25">
+              Get Started
+            </a>
+            <!-- CSS-only hamburger label -->
+            <label for="nav-toggle" aria-label="Toggle menu" class="ham-label md:hidden w-9 h-9 flex flex-col justify-center items-center gap-1.5 cursor-pointer">
+              <span class="ham-top block w-5 h-0.5 bg-slate-300 transition-all duration-300"></span>
+              <span class="ham-mid block w-5 h-0.5 bg-slate-300 transition-all duration-300"></span>
+              <span class="ham-bot block w-3.5 h-0.5 bg-slate-300 transition-all duration-300"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu: hidden by default, shown when checkbox is checked -->
+      <div class="mobile-menu-panel max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out md:hidden border-t border-white/[0.06] bg-navy/95">
+        <ul class="px-5 py-4 space-y-1">
+          <li><label for="nav-toggle"><a href="#home"     class="block py-2.5 text-slate-300 hover:text-white text-sm font-medium transition-colors">Home</a></label></li>
+          <li><label for="nav-toggle"><a href="#services" class="block py-2.5 text-slate-300 hover:text-white text-sm font-medium transition-colors">Services</a></label></li>
+          <li><label for="nav-toggle"><a href="#about"    class="block py-2.5 text-slate-300 hover:text-white text-sm font-medium transition-colors">About</a></label></li>
+          <li><label for="nav-toggle"><a href="#contact"  class="block py-2.5 text-slate-300 hover:text-white text-sm font-medium transition-colors">Contact</a></label></li>
+          <li class="pt-2">
+            <label for="nav-toggle"><a href="#contact" class="block text-center bg-sky-brand hover:bg-blue-400 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors">Get Started</a></label>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- HERO SECTION -->
+  <section id="home" class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+
+    <!-- Glow  -->
+    <div class="pointer-events-none absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-blue-600 blur-[80px] opacity-25"></div>
+    <div class="pointer-events-none absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-violet blur-[80px] opacity-[0.18]"></div>
+
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-8 py-20 lg:py-28 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+
+        <div>
+          
+          <div class="fade-up inline-flex items-center gap-2 bg-sky-brand/10 border border-sky-brand/25 rounded-full px-4 py-1.5 text-xs font-semibold text-blue-400 tracking-wider uppercase mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+            Digital Innovation Agency
+          </div>
+
+          <h1 class="fade-up d-100 font-display text-[clamp(2.4rem,5vw,3.6rem)] font-extrabold leading-[1.1] text-white mb-5">
+            Build Your <span class="text-gradient-blue">Digital</span><br>Future
+          </h1>
+
+          <p class="fade-up d-200 text-slate-400 text-lg leading-relaxed mb-10 max-w-md">
+            Transform your business with cutting-edge solutions that drive growth and innovation in the digital landscape.
+          </p>
+
+          <div class="fade-up d-300 flex flex-wrap gap-4">
+            <a href="#contact" class="inline-flex items-center gap-2 bg-sky-brand hover:bg-blue-400 active:bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-sky-brand/30 transition-all duration-200 hover:-translate-y-0.5">
+              Start Your Journey
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+            <a href="#services" class="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 backdrop-blur-sm">
+              Learn More
+            </a>
+          </div>
+
+          <!-- Mini stats row -->
+          <div class="fade-up d-400 flex flex-wrap gap-8 mt-12 pt-10 border-t border-white/[0.07]">
+            <div>
+              <p class="font-display text-2xl font-bold text-white">150<span class="text-blue-400">+</span></p>
+              <p class="text-slate-400 text-xs mt-0.5">Projects Delivered</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl font-bold text-white">98<span class="text-emerald-brand">%</span></p>
+              <p class="text-slate-400 text-xs mt-0.5">Client Satisfaction</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl font-bold text-white">7<span class="text-violet">+</span></p>
+              <p class="text-slate-400 text-xs mt-0.5">Years Experience</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero image -->
+        <div class="fade-right d-300 relative flex justify-center lg:justify-end">
+          <!-- Decorative rings -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="w-[420px] h-[420px] rounded-full border border-sky-brand/10 animate-pulse-slow"></div>
+            <div class="absolute w-[340px] h-[340px] rounded-full border border-sky-brand/10"></div>
+          </div>
+          <div class="hero-img-wrap animate-float relative z-10 w-full max-w-[540px]">
+            <img
+              src="./assets/images/hero-image.png"
+              alt="Digital dashboard analytics"
+              class="w-full h-auto rounded-[18px] object-cover"
+              loading="eager"
+            />
+            <!-- Floating badge -->
+            <div class="absolute -bottom-4 -left-4 bg-navy-light border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3 shadow-2xl backdrop-blur-sm">
+              <div class="w-9 h-9 rounded-lg bg-emerald-brand/15 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-brand" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"/></svg>
+              </div>
+              <div>
+                <p class="text-white text-xs font-semibold">Revenue Growth</p>
+                <p class="text-emerald-brand text-xs font-bold">↑ +34.8% this quarter</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom fade -->
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-navy to-transparent pointer-events-none"></div>
+  </section>
+
+
+  <!-- SERVICES SECTION  -->
+  <section id="services" class="relative py-24 lg:py-32">
+    <!-- Glow -->
+    <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-blue-600/10 blur-[100px] rounded-full"></div>
+
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-8">
+
+      <!-- Section header -->
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block text-blue-400 text-xs font-semibold uppercase tracking-widest mb-4">What We Offer</span>
+        <h2 class="font-display text-[clamp(1.8rem,3.5vw,2.75rem)] font-extrabold text-white mb-3">Our Services</h2>
+        <p class="text-slate-400 text-lg max-w-xl mx-auto">
+          We provide comprehensive solutions to help your business thrive in the digital age
+        </p>
+      </div>
+
+      <!-- Cards grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Web Development -->
+        <div class="service-card p-7 reveal group">
+          <div class="w-12 h-12 rounded-xl bg-sky-brand/15 border border-sky-brand/25 flex items-center justify-center mb-5 group-hover:bg-sky-brand/25 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-white font-semibold text-lg mb-3">Web Development</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Custom websites and web applications built with modern technologies for optimal performance and seamless user experience.
+          </p>
+          <div class="mt-5 flex items-center gap-1.5 text-blue-400 text-sm font-medium group-hover:gap-3 transition-all duration-200 cursor-pointer">
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </div>
+        </div>
+
+        <!-- Mobile Apps -->
+        <div class="service-card p-7 reveal group [transition-delay:0.1s]">
+          <div class="w-12 h-12 rounded-xl bg-emerald-brand/15 border border-emerald-brand/25 flex items-center justify-center mb-5 group-hover:bg-emerald-brand/25 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-emerald-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>
+              <line x1="12" y1="18" x2="12.01" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-white font-semibold text-lg mb-3">Mobile Apps</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.
+          </p>
+          <div class="mt-5 flex items-center gap-1.5 text-emerald-brand text-sm font-medium group-hover:gap-3 transition-all duration-200 cursor-pointer">
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </div>
+        </div>
+
+        <!-- Digital Marketing -->
+        <div class="service-card p-7 reveal group sm:col-span-2 lg:col-span-1 [transition-delay:0.2s]">
+          <div class="w-12 h-12 rounded-xl bg-violet/15 border border-violet/25 flex items-center justify-center mb-5 group-hover:bg-violet/25 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-violet" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-white font-semibold text-lg mb-3">Digital Marketing</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Strategic marketing campaigns that boost your online presence and drive meaningful conversions for your business.
+          </p>
+          <div class="mt-5 flex items-center gap-1.5 text-violet text-sm font-medium group-hover:gap-3 transition-all duration-200 cursor-pointer">
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="relative py-24 lg:py-32 bg-navy-light/40">
+    <div class="pointer-events-none absolute inset-0 bg-grid-pattern opacity-50"></div>
+
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <!-- Image -->
+        <div class="reveal order-2 lg:order-1">
+          <div class="relative">
+            <!-- Decorative border -->
+            <div class="absolute -inset-3 rounded-[22px] border border-sky-brand/15"></div>
+            <div class="absolute -inset-6 rounded-[26px] border border-sky-brand/[0.07]"></div>
+            <img
+              src="./assets/images/about-image.png"
+              alt="Nexus team collaborating"
+              class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-2xl shadow-black/55"
+              loading="lazy"
+            />
+            <!-- Floating tag -->
+            <div class="absolute -top-4 -right-4 z-20 bg-sky-brand text-white text-xs font-display font-bold px-4 py-2 rounded-xl shadow-lg shadow-sky-brand/40">
+              Est. 2017
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal order-1 lg:order-2 [transition-delay:0.15s]">
+          <span class="inline-block text-blue-400 text-xs font-semibold uppercase tracking-widest mb-4">Our Story</span>
+          <h2 class="font-display text-[clamp(1.8rem,3.5vw,2.75rem)] font-extrabold text-white mb-5">About Nexus</h2>
+          <p class="text-slate-400 text-base leading-relaxed mb-8">
+            We are a forward-thinking technology company dedicated to helping businesses navigate the digital transformation journey. With years of experience and a passion for innovation, we deliver solutions that matter.
+          </p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="bg-navy/60 border border-white/[0.07] rounded-2xl p-5">
+              <p class="font-display text-4xl font-extrabold leading-none text-gradient-blue mb-1">150+</p>
+              <p class="text-slate-400 text-sm">Projects Completed</p>
+            </div>
+            <div class="bg-navy/60 border border-white/[0.07] rounded-2xl p-5">
+              <p class="font-display text-4xl font-extrabold leading-none text-emerald-brand mb-1">98%</p>
+              <p class="text-slate-400 text-sm">Client Satisfaction</p>
+            </div>
+          </div>
+
+          <!-- Feature list -->
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-slate-300 text-sm">
+              <span class="w-5 h-5 rounded-full bg-sky-brand/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-blue-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              End-to-end product design and development
+            </li>
+            <li class="flex items-start gap-3 text-slate-300 text-sm">
+              <span class="w-5 h-5 rounded-full bg-sky-brand/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-blue-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              Agile methodology with transparent communication
+            </li>
+            <li class="flex items-start gap-3 text-slate-300 text-sm">
+              <span class="w-5 h-5 rounded-full bg-sky-brand/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-blue-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              Post-launch support and continuous optimisation
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="relative py-24 lg:py-32">
+    <div class="pointer-events-none absolute top-0 right-0 w-[500px] h-[400px] bg-violet/[0.08] blur-[120px] rounded-full"></div>
+
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-8">
+
+      <!-- Section header -->
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block text-violet text-xs font-semibold uppercase tracking-widest mb-4">Reach Out</span>
+        <h2 class="font-display text-[clamp(1.8rem,3.5vw,2.75rem)] font-extrabold text-white mb-3">Get In Touch</h2>
+        <p class="text-slate-400 text-lg max-w-lg mx-auto">
+          Ready to start your project? Let's discuss how we can help you achieve your goals.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-10 lg:gap-16">
+
+        <!-- Contact info -->
+        <div class="lg:col-span-2 reveal space-y-7">
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-brand/[0.12] border border-sky-brand/20 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-medium text-sm mb-0.5">Email Us</p>
+              <p class="text-slate-400 text-sm">hello@nexus.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-brand/[0.12] border border-sky-brand/20 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-medium text-sm mb-0.5">Call Us</p>
+              <p class="text-slate-400 text-sm">+1 (555) 123-4567</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-brand/[0.12] border border-sky-brand/20 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-medium text-sm mb-0.5">Visit Us</p>
+              <p class="text-slate-400 text-sm">123 Business Ave, Tech City</p>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="pt-4">
+            <p class="text-slate-400 text-xs uppercase tracking-widest mb-4">Follow Us</p>
+            <div class="flex items-center gap-3">
+              <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate-400 hover:text-white hover:border-white/20 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate-400 hover:text-white hover:border-white/20 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="#" aria-label="GitHub" class="w-9 h-9 rounded-lg bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate-400 hover:text-white hover:border-white/20 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="lg:col-span-3 reveal [transition-delay:0.12s]">
+          <div class="bg-navy-light border border-white/[0.07] rounded-2xl p-8">
+            <form id="contact-form" novalidate>
+              <div class="space-y-5">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+                  <input id="name" name="name" type="text" placeholder="John Doe" class="form-input" required />
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                  <input id="email" name="email" type="email" placeholder="john@example.com" class="form-input" required />
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Your Message</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." class="form-input resize-none" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-sky-brand hover:bg-blue-400 active:bg-blue-600 text-white font-semibold py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-sky-brand/25 flex items-center justify-center gap-2">
+                  <span>Send Message</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/[0.06] bg-[#0c1220]">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-5">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+          <div class="w-7 h-7 rounded-lg bg-sky-brand flex items-center justify-center shadow-md shadow-sky-brand/30">
+            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <span class="font-display font-bold text-white text-base">Nexus</span>
+        </a>
+
+        <!-- Copyright -->
+        <p class="text-slate-500 text-sm">
+          &copy; 2026 Nexus. All rights reserved.
+        </p>
+
+        <!-- Social -->
+        <div class="flex items-center gap-3">
+          <a href="#" aria-label="Twitter" class="text-slate-500 hover:text-slate-300 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="text-slate-500 hover:text-slate-300 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" aria-label="GitHub" class="text-slate-500 hover:text-slate-300 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CHAT BUTTON -->
+  <button aria-label="Chat support" class="chat-bubble fixed bottom-6 right-6 z-40 shadow-xl" title="Chat with us">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+    </svg>
+  </button>
+
+</body>
+</html>
